@@ -1,0 +1,82 @@
+.info-group {
+	background: white;
+	border-radius: $border-radius + 1;
+    box-shadow: 0 2px 34px 0 rgba($black, 0.2);
+    overflow: hidden;
+	margin-top: 10px;
+
+	& ~ & {
+		margin-top: 30px;
+	}
+
+	&__heading {
+		padding: 15px 20px;
+
+		& h3 {
+			@include font-size(22px, true, $line-height-sm);
+		}
+	}
+
+	&__pedigree {
+		background: $grey-6;
+		padding: 0 20px;
+
+		& .row {
+			margin: 0;
+			padding: 5px 0;
+
+			&:first-of-type {
+				border-bottom: 1px solid $grey-5;
+			}
+
+			& .col-6 {
+				padding: 0;
+			}
+		}
+	}
+
+	&__btn {
+		background: $white;
+		padding: 15px 20px;
+	}
+
+	&__rows {
+		margin: 0;
+
+		& > div {
+			padding: 15px 20px;
+			background: $grey-6;
+
+			&:last-of-type {
+				flex-grow: 1;
+				max-width: none;
+			}
+
+			@include media-breakpoint-only(xs) {
+				&:nth-child(4n), &:nth-child(4n-1) {
+			        background: $white;
+			    }
+			}
+
+			@include media-breakpoint-only(sm) {
+				&:nth-child(6n), &:nth-child(6n-1), &:nth-child(6n-2) {
+			        background: $white;
+			    }
+			}
+
+			@include media-breakpoint-only(md) {
+				&:nth-child(4n), &:nth-child(4n-1) {
+			        background: $white;
+			    }
+			}
+
+			@include media-breakpoint-up(lg) {
+				&:nth-child(8n), &:nth-child(8n-1), &:nth-child(8n-2), &:nth-child(8n-3) {
+			        background: $white;
+			    }
+			}
+
+
+		}
+	}
+}

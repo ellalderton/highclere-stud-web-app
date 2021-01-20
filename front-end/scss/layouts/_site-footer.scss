@@ -1,0 +1,39 @@
+.site-footer {
+    width: 100%;
+    margin-top: $spacer * 2;
+    padding: $box-padding;
+    background: $grey-5;
+    color: $secondary;
+
+    @include font-size(12px, true, $line-height-sm);
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__credit {
+        margin-top: 5px;
+        color: $secondary;
+        font-weight: $font-weight-bold;
+
+        & a {
+            color: $secondary;
+        }
+
+        @include hover() {
+            color: $secondary;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &__item {
+            list-style: none;
+        }
+    }
+}

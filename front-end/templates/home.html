@@ -1,0 +1,29 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+
+    <div class="page-header">
+        <h1 class="[ heading--1 heading--color-secondary ] [ text-center ] [ mb-4 ]">
+            Notes
+        </h1>
+        <div class="page-header__buttons">
+            <button type="button" class="page-header__button">
+                <span class="sr-only">Open filter options</span>
+                {% include "svg/filter.svg" %}
+            </button>
+        </div>
+    </div>
+
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+    {% include "partials/recent-update-item.html" %}
+</div>
+
+{% endblock %}

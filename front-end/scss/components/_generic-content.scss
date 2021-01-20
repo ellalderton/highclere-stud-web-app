@@ -1,0 +1,22 @@
+.generic-content {
+    // Flow
+    > * + * {
+        margin-top: $spacer * 2/3;
+    }
+
+    // Headings
+    h1 {
+        @extend %heading--1;
+    }
+
+    h2 {
+        @extend %heading--2;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        @extend %heading--4;
+    }
+}

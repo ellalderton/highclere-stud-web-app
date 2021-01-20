@@ -1,0 +1,68 @@
+<header class="site-head" role="banner" data-module="site-head">
+    <div class="site-head__brand-bar">
+        <a class="site-head__brand" href="">
+            <img class="site-head__brand-logo" src="/assets/images/brand-logo.svg" alt="Al Shaqab">
+        </a>
+    </div>
+    <div class="site-head__main">
+        <div class="site-head__inner">
+            {# Hamburger #}
+            <a class="[ site-head__hamburger ] [ hamburger ] [ js-nav-toggle js-nav-toggle--hamburger ]" href="#menu">
+                <span class="sr-only">Skip to the main menu</span>
+                <span class="hamburger__decor" aria-hidden="true" role="presentation">
+                    <span class="hamburger__bars"></span>
+                </span>
+            </a>
+
+            {# Nav #}
+            <nav class="site-head__nav">
+                <ul class="site-head__nav-items">
+                    <li class="site-head__nav-item">
+                        <a class="site-head__nav-link" href="">
+                            <span class="site-head__nav-item-icon">
+                                <span class="site-head__nav-item-badge">23</span>
+                                {% include "svg/note.svg" %}
+                            </span>
+                            <span class="site-head__nav-item-label">Notes</span>
+                        </a>
+                    </li>
+                    <li class="site-head__nav-item is-active">
+                        <a class="site-head__nav-link" href="">
+                            <span class="site-head__nav-item-icon">
+                                {% include "svg/nav-in-training.svg" %}
+                            </span>
+                            <span class="site-head__nav-item-label">In Training</span>
+                        </a>
+                    </li>
+                    <li class="site-head__nav-item">
+                        <a class="site-head__nav-link" href="">
+                            <span class="site-head__nav-item-icon">
+                                {% include "svg/nav-breeding.svg" %}
+                            </span>
+                            <span class="site-head__nav-item-label">Breeding</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="d-none d-md-flex">
+                {# Comments #}
+                <a class="site-head__comments" href="">
+                    <span class="site-head__comments-badge">12</span>
+                    <span class="site-head__comments-label">Comments</span>
+                </a>
+
+                {# Search button #}
+                <a class="[ site-head__search-button ] [ js-search-toggle ]" href="#search">
+                    <span class="sr-only">Search</span>
+                    <span class="site-head__search-icon">
+                        {% include "svg/search.svg" %}
+                    </span>
+                    <span class="site-head__search-close-icon d-none">
+                        {% include "svg/times.svg" %}
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

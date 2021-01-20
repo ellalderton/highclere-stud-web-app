@@ -1,0 +1,131 @@
+.entries-accordion {
+
+	&__container {
+		margin-bottom: 3px;
+	}
+
+	&__row {
+		background: $grey-5;
+		padding: 8px 15px;
+		display: flex;
+		justify-content: space-between;		
+		align-items: center;
+
+		&__copy {
+
+			&__name a {
+				color: $secondary--dark;
+				@include font-size(16px);
+			}
+
+			&__date {
+				display: flex;
+				@include font-size(14px);
+				color: $grey-1;
+
+				& div:first-of-type {
+					min-width: 170px;
+
+					@media screen and (max-width: 340px) {
+						min-width: 148px;
+					}			
+				}
+
+				&--profile {
+					@include font-size(14px);
+				}
+			}
+
+			&__time {
+				&--profile {
+					@include font-size(18px, true, 1.05);
+					color: $secondary--dark;
+				}
+			}
+		}
+
+		&__trigger {
+			width: 24px;
+			height: 24px;
+			background: $white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-top: 2px;
+			cursor: pointer;
+
+			&--open {
+				transform: rotate(180deg);
+			}
+		}
+
+		&--declared {
+			background: $primary;
+			// position: relative;
+			// padding-left: 30px;
+
+			
+			// &:before {
+			// 	content: '';
+			// 	height: 100%;
+			// 	width: 16px;
+				
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// }
+
+			& .entries-accordion__row__copy__name a,
+			& .entries-accordion__row__copy__time--profile,
+			& .entries-accordion__row__copy__date--profile {
+				font-weight: bold;
+			}
+
+			& .entries-accordion__row__copy__date,
+			& .entries-accordion__row__copy__date--profile {
+				color: $white;
+			}
+		}		
+	}
+
+	&__dropdown {
+
+		&__row {
+			background: $grey-6;
+			border-top: solid 1px $white;
+			border-bottom: solid 1px $grey-5;
+			padding: 5px 15px;
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+
+			&__notes {
+				display: flex;
+				padding: 8px 0;
+
+				a:first-of-type {
+					margin-right: 40px;
+				}
+			}
+		}
+		
+
+		&__label {
+			@include font-size(12px);
+			font-weight: bold;
+			color: $grey-2;
+		}
+
+		&__field {
+			@include font-size(14px);
+			color: $grey-1;
+
+			& a {
+				color: $secondary--light;
+			}
+		}
+
+	}
+}

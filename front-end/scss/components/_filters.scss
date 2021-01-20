@@ -1,0 +1,40 @@
+.filters {
+	// max-height: 0px;
+	opacity: 0;
+	transition: opacity 0.7s ease-out;
+	display: none;
+	// overflow-y: hidden;
+
+	&--expand {
+		display: flex;
+		// max-height: 1200px;
+		// overflow-y: initial;
+		opacity: 1;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: flex-end;
+
+		// @include media-breakpoint-only(xs) {
+		// 	flex-direction: column;
+		// }
+
+		& .btn {
+			min-width: calc(50vw - 22.5px);
+
+			@include media-breakpoint-up(sm) {
+				min-width: 175px;
+			}
+		}
+
+		& div:first-of-type {
+			// margin-bottom: 15px;
+
+			// @include media-breakpoint-up(sm) {
+				margin-right: 15px;
+			// 	margin-bottom: 0;
+			// }
+		}
+	}
+}

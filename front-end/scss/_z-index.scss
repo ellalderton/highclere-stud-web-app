@@ -1,0 +1,57 @@
+/*-------------------------------------------------*\
+    Z-INDEX
+
+    Use this file to store any z-index rules.
+    Keeping them all in one place makes it easier
+    to keep track of various elements in the stack.
+\*-------------------------------------------------*/
+.app {
+    z-index: 10;
+
+    &__nav-toggle {
+        z-index: 20;
+
+        // .app.is-offset--nav &,
+        // .app.is-offset--search & {
+        //     z-index: 20;
+        // }
+    }
+}
+
+.site-head {
+    z-index: 20;
+
+    &__nav-item-badge {
+        z-index: 10;
+    }
+}
+
+.hamburger {
+    z-index: 30;
+}
+
+.off-canvas-nav {
+    z-index: 40;
+}
+
+.comments {
+    &__comment {
+        &:before {
+            z-index: 5;
+        }
+    }
+
+    &__avatar {
+        z-index: 10;
+    }
+}
+
+.footer-nav {
+    z-index: 20;
+}
+
+.auth {
+    &__container {
+        z-index: 2;
+    }
+}

@@ -1,0 +1,13 @@
+<svg class="icon" viewBox="0 0 38 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mobile/footer-nav/notes+comments" transform="translate(-99.000000, -5.000000)">
+            <g id="icon/winning-post" transform="translate(99.000000, 5.000000)">
+                <g>
+                    <circle id="Oval" fill="#FFFFFF" fill-rule="evenodd" cx="19" cy="19" r="12"></circle>
+                    <path d="M19.1046512,0 C8.88736545,0 0.604651163,8.28271429 0.604651163,18.5 C0.604651163,28.7172857 8.88736545,37 19.1046512,37 C29.3219369,37 37.6046512,28.7172857 37.6046512,18.5 C37.6046512,8.28271429 29.3219369,0 19.1046512,0 M29.5109012,18.5 C29.5109012,24.2378462 24.8424973,28.90625 19.1046512,28.90625 C13.366805,28.90625 8.69840116,24.2378462 8.69840116,18.5 C8.69840116,12.7621538 13.366805,8.09375 19.1046512,8.09375 C24.8424973,8.09375 29.5109012,12.7621538 29.5109012,18.5 Z" id="Fill-3" fill="#FF1936" fill-rule="nonzero"></path>
+                    <polygon id="Fill-5" fill="#BAAFAC" fill-rule="evenodd" points="16.6046512 50 20.6046512 50 20.6046512 40 16.6046512 40"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,80 @@
+.app {
+    $self: &;
+
+    @extend %transition--slide;
+
+    position: relative;
+    min-height: 100%;
+    padding-top: $brand-height + ($brand-bar-padding * 2) + $site-head-height;
+    padding-bottom: $footer-nav-height;
+    // has z-index
+
+    @include media-breakpoint-down(sm) {
+        overflow: hidden;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: 0;
+    }
+
+    &.is-offset--nav {
+        transform: translate3d(calc(100% - #{$nav-gutter}), 0, 0);
+        overflow: initial;
+
+        @include media-breakpoint-up(sm) {
+            transform: translate3d(#{$nav-width}, 0, 0);
+        }
+    }
+
+    &.is-offset--search {
+        transform: translate3d(-100%, 0, 0);
+        overflow: initial;
+
+        @include media-breakpoint-up(md) {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    &__nav-toggle {
+        @extend %button-reset;
+        @extend %transition;
+
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $black;
+        opacity: 0;
+        visibility: hidden;
+        // has z-index
+
+        #{ $self }.is-offset--nav & {
+            opacity: 0.9;
+            visibility: visible;
+            // has z-index
+        }
+
+        &:active,
+        &:hover {
+            background: $black;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        .icon {
+            position: absolute;
+            top: $spacer;
+            left: $spacer;
+            width: 34px;
+            height: 34px;
+            fill: $white;
+        }
+    }
+
+    &--auth {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

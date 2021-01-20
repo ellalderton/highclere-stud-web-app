@@ -1,0 +1,25 @@
+.kvp {
+    &__label {
+        display: block;
+        color: $grey-1;
+        font-weight: $font-weight-bold;
+        margin-bottom: 3px;
+
+        @include font-size(12px, true, $line-height-sm);
+
+        @include media-breakpoint-up(sm) {
+            @include font-size(14px, true, $line-height-sm);
+        }
+    }
+
+    &__value {
+        display: block;
+        color: $secondary--light;
+
+        @include font-size(13px, true, $line-height-sm);
+
+        @include media-breakpoint-up(sm) {
+            @include font-size(15px, true, $line-height-sm);
+        }
+    }
+}

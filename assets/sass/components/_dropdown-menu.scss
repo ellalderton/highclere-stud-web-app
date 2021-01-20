@@ -1,0 +1,24 @@
+.dropdown-menu {
+    border: 0;
+    box-shadow: 0 2px 44px 0 rgba($black, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    color: $secondary--light;
+    font-weight: $font-weight-bold;
+
+    @include font-size(12px, true, $line-height-sm);
+
+    @include hover() {
+        color: $secondary--light;
+    }
+
+    .icon {
+        width: 15px;
+        height: 16px;
+        fill: $primary--light;
+        margin-right: 5px;
+    }
+}

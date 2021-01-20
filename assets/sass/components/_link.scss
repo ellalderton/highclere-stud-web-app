@@ -1,0 +1,29 @@
+.link {
+    position: relative;
+
+    &--with-icon {
+        bottom: $spacer;
+        z-index: 2;
+
+        @include media-breakpoint-up(md) {
+            bottom: -40px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            color: $primary;
+            fill: currentColor;
+            stroke: currentColor;
+        }
+
+        & > span {
+            color: $primary;
+            font-weight: bold;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

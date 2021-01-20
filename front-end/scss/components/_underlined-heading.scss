@@ -1,0 +1,17 @@
+.underlined-heading {
+    position: relative;
+    padding-bottom: 15px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -17px;
+        display: block;
+        width: 34px;
+        height: 3px;
+        border-radius: 1.5px;
+        background: $primary;
+    }
+}

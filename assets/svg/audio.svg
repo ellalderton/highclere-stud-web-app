@@ -1,0 +1,13 @@
+<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" aria-hidden="true" role="presentation">
+    <path d="M1,22.58a1,1,0,0,0-1,1v4.84a1,1,0,0,0,2,0V23.58A1,1,0,0,0,1,22.58Z" fill-rule="evenodd"/>
+    <path d="M6,19.55a1,1,0,0,0-1,1v10.9a1,1,0,1,0,2,0V20.55A1,1,0,0,0,6,19.55Z" fill-rule="evenodd"/>
+    <path d="M11,19a1,1,0,0,0-1,1V32.1a1,1,0,0,0,2,0V20A1,1,0,0,0,11,19Z" fill-rule="evenodd"/>
+    <path d="M16,10.47a1,1,0,0,0-1,1V40.53a1,1,0,0,0,2,0V11.47A1,1,0,0,0,16,10.47Z" fill-rule="evenodd"/>
+    <path d="M21,12.89a1,1,0,0,0-1,1V38.11a1,1,0,0,0,2,0V13.89A1,1,0,0,0,21,12.89Z" fill-rule="evenodd"/>
+    <path d="M26,9.26a1,1,0,0,0-1,1V41.74a1,1,0,1,0,2,0V10.26A1,1,0,0,0,26,9.26Z" fill-rule="evenodd"/>
+    <path d="M31,2a1,1,0,0,0-1,1V49a1,1,0,0,0,2,0V3A1,1,0,0,0,31,2Z" fill-rule="evenodd"/>
+    <path d="M36,9.26a1,1,0,0,0-1,1V41.74a1,1,0,1,0,2,0V10.26A1,1,0,0,0,36,9.26Z" fill-rule="evenodd"/>
+    <path d="M41,15.32a1,1,0,0,0-1,1V35.68a1,1,0,1,0,2,0V16.32A1,1,0,0,0,41,15.32Z" fill-rule="evenodd"/>
+    <path d="M46,22.58a1,1,0,0,0-1,1v4.84a1,1,0,0,0,2,0V23.58A1,1,0,0,0,46,22.58Z" fill-rule="evenodd"/>
+    <path d="M51,20.16a1,1,0,0,0-1,1v9.68a1,1,0,1,0,2,0V21.16A1,1,0,0,0,51,20.16Z" fill-rule="evenodd"/>
+</svg>

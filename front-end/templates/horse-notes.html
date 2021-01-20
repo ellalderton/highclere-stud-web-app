@@ -1,0 +1,39 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 heading--color-secondary ]">
+            8 Notes
+        </h1>
+        <p>last update DD-MM-YYYY</p>
+    </div>
+
+
+    <div class="mb-3">
+        {% include "partials/horse-item.html" %}
+    </div>
+    <div class="row">
+        <div class="[ col-12 col-lg-8 ] [ flow-vertical ]">
+            {% include "partials/horse-note.html" %}
+            {% include "partials/horse-note.html" %}
+            {% include "partials/horse-note.html" %}
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="[ sticky-sidebar ] [ flow-vertical ]">
+                <a class="btn btn-block btn-white" href="">View horse profile</a>
+
+                <a href="#" class="btn btn-block btn-primary btn--has-icon">
+                    {% include "svg/note.svg" %}
+                    Add a new note
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

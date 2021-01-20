@@ -1,0 +1,12 @@
+<svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="11.-Horse-Media" transform="translate(-374.000000, -141.000000)" stroke="#946E2C">
+            <g id="icon/back-button" transform="translate(380.000000, 147.000000)">
+                <g id="Group-4" transform="translate(1.000000, 6.000000) scale(1, -1) rotate(-360.000000) translate(-1.000000, -6.000000) translate(-4.000000, -4.000000)">
+                    <path d="M0,10 L10,0" id="Line-2" stroke-width="3"></path>
+                    <path d="M0,20 L10,10" id="Line-2" stroke-width="3" transform="translate(5.000000, 15.000000) scale(1, -1) translate(-5.000000, -15.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

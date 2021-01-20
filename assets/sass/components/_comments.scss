@@ -1,0 +1,154 @@
+$avatar-size: 38px;
+
+.comments {
+    $self: &;
+
+    list-style: none;
+    padding-left: 0;
+
+    #{ $self }__comment & {
+        margin-top: $spacer;
+        margin-left: $spacer;
+
+        @include media-breakpoint-up(sm) {
+            margin-left: $avatar-size + $spacer;
+        }
+    }
+
+    &__comment {
+        position: relative;
+
+        & + & {
+            margin-top: $spacer;
+        }
+
+        &:before {
+            @include media-breakpoint-up(sm) {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: calc(100% + #{$spacer});
+                bottom: -#{$spacer};
+                left: $avatar-size / 2;
+                background: $grey-5;
+            }
+            // has z-index
+        }
+
+        &:first-child {
+            &:before {
+                height: calc(50% + #{$spacer});
+            }
+        }
+
+        &:last-child {
+            &:before {
+                top: 0;
+                bottom: auto;
+                height: calc(100%);
+            }
+        }
+
+        #{ $self }__comment & {
+            &:first-child {
+                &:before {
+                    height: calc(100% + #{$spacer * 2});
+                }
+            }
+
+            &:first-child:last-child {
+                &:before {
+                    top: -20px;
+                    bottom: auto;
+                    height: calc(50%);
+                }
+            }
+        }
+    }
+
+    &__comment-inner {
+        display: flex;
+        align-items: center;
+
+        &__note {
+            margin-left: -20px;
+
+            @include media-breakpoint-up(sm) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 50%;
+        background: $secondary;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        box-shadow: 0 2px 34px 0 rgba($black, 0.1);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-weight: bold;
+        @include font-size(18px);
+        // has z-index
+    }
+
+    &__comment-panel {
+        padding: $spacer;
+        border-radius: $border-radius;
+        flex-grow: 1;
+        margin-left: $spacer;
+        box-shadow: 0 2px 34px 0 rgba($black, 0.1);
+        background: $white;
+
+        #{ $self }__comment--unread > #{ $self }__comment-inner > & {
+            border-left: 6px solid $primary--light;
+        }
+
+        #{ $self }__comment--read > #{ $self }__comment-inner > & {
+            border-left: 6px solid $grey-3;
+            background: $grey-6;
+            box-shadow: none;
+        }
+    }
+
+    &__comment-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__comment-heading {
+        color: $secondary--light;
+
+        @include font-size(13px, true, $line-height-sm);
+    }
+
+    &__comment-buttons {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+
+        > * + * {
+            margin-left: 10px;
+        }
+    }
+
+    &__comment-button {
+        .icon {
+            width: 15px;
+            height: 15px;
+            fill: $primary--light;
+        }
+
+        &--dropdown {
+            @extend %button-reset;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.sweet-modal {
+	&.theme-dark {
+		background: $secondary !important;
+	}
+
+	& .sweet-box-actions {
+		display: flex;
+		justify-content: flex-end;
+
+		& .sweet-action-close {
+			transition: transform 0.3s;
+			transform: scale(1.2);
+
+			&:hover {
+				background: none !important;
+				transform: scale(1.4);
+			}
+		}
+	}
+}

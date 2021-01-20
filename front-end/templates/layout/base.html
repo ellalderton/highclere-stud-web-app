@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js" dir="ltr" lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>
+        {% block title %}{{ project_settings.name }}
+        {% endblock %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#cc88cc">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#cc88cc">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Page description less than 200 characters">
+
+    {% include "partials/social-card-meta.html" %}
+
+    <link rel="stylesheet" href="/assets/css/app.css?{{ project_settings.asset_version }}" media="all">
+
+</head>
+
+<body>
+
+    <div class="app js-app">
+        {% include "partials/site-head.html" %}
+
+        {% include "partials/off-canvas-nav.html" %}
+
+        {% include "partials/off-canvas-search.html" %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include "partials/site-foot.html" %}
+        {% include "partials/footer-nav.html" %}
+
+        <button class="[ app__nav-toggle ] [ js-nav-toggle ]">
+            <span class="sr-only">Close the menu</span>
+            {% include "svg/times.svg" %}
+        </button>
+    </div>
+
+    {# <div class="breakpoint-helper"></div> #}
+
+    <script src="/assets/js/bundle.js?{{ project_settings.asset_version }}"></script>
+
+</body>
+
+</html>

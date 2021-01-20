@@ -1,0 +1,106 @@
+.footer-nav {
+    $self: &;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: $footer-nav-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    background: $secondary;
+    // has z-index
+
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+
+    &__search-button {
+        margin-left: 30px;
+
+        .icon {
+            @extend %transition;
+
+            width: 27px;
+            height: 27px;
+            fill: $white;
+        }
+
+        @include hover() {
+            .icon {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__comments {
+        @extend %transition;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 26px;
+        background: $notification-comments-color;
+        color: $notification-comments-text-color;
+        font-weight: $font-weight-bold;
+        border-radius: 5px 5px 5px 0;
+
+        @include font-size(13px, true, 1);
+
+        &:after {
+            @extend %transition;
+
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 0 0;
+            border-color: $notification-comments-color transparent transparent;
+        }
+
+        @include hover() {
+            text-decoration: none;
+            color: $notification-comments-text-color;
+            background: lighten($notification-comments-color, 5%);
+
+            &:after {
+                border-color: lighten($notification-comments-color, 5%)
+                    transparent transparent;
+            }
+        }
+
+        &--allread {
+            background: $grey-4;
+
+            &:after {
+                @extend %transition;
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 7px 0 0;
+                border-color: $grey-4 transparent transparent;
+            }
+
+            @include hover() {
+                background: lighten($grey-4, 5%);
+
+                &:after {
+                    border-color: lighten($grey-4, 5%)
+                        transparent transparent;
+                }
+            }
+        }
+    }
+}

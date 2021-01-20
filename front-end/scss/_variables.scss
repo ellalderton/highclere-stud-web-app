@@ -1,0 +1,76 @@
+/*-------------------------------------------------*\
+    VARIABLES
+
+    Use this file to declare variables.
+
+\*-------------------------------------------------*/
+
+// Metrics
+$site-max-width: 1200px;
+$spacer: 20px;
+$box-padding: 20px;
+$border-radius: 2px;
+
+// Typography
+$root-font-size: 15px;
+$font-family-base: "Ubuntu", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-paragraph: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+$line-height-sm: 1.2;
+$headings-font-weight: 700;
+
+// Colors
+$grey-1: #2d2d2d;
+$grey-2: #717171;
+$grey-3: #979797;
+$grey-4: #b8b8b8;
+$grey-5: #d4d4d4;
+$grey-6: #f0f0f0;
+
+// Elliot's grey
+$grey: #c7c7c7;
+
+$body-bg: $grey-6;
+$headings-color: $grey-1;
+$body-color: $grey-2;
+
+$theme-colors: (
+    "dark": $grey-1,
+    "primary-light": $primary--light,
+    "secondary-light": $secondary--light
+);
+
+$hamburger-decor-width: 34px;
+$nav-gutter: 74px;
+$nav-width: 450px;
+$nav-curve-radius: 40px;
+
+// Forms
+$input-btn-padding-y: 0.8rem;
+
+// Buttons
+$btn-block-spacing-y: 15px;
+
+// Site head
+$site-head-height: 64px;
+$brand-bar-padding: 5px;
+
+// Dropdowns
+$dropdown-item-padding-y: 8px;
+$dropdown-item-padding-x: 15px;
+
+// Nav links
+$nav-link-padding-y: 1rem;
+$nav-link-padding-x: 1rem;
+
+// Notifications
+$notification-notes-color: #5466da;
+$notification-notes-text-color: #fff;
+$notification-comments-color: #f42b63;
+$notification-comments-text-color: #fff;
+
+// Footer nav
+$footer-nav-height: 60px;

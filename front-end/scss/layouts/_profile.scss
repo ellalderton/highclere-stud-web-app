@@ -1,0 +1,58 @@
+$avatar-update-btn-size: 36px;
+
+.profile {
+    max-width: 770px;
+    margin: 0 auto;
+
+    &__avatar {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto #{($spacer) + ($avatar-update-btn-size/2)};
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &:not([class*="--has-image"]) {
+            background-color: $secondary--light;
+        }
+    }
+
+    &__avatar-initials {
+        color: $white;
+        font-weight: $font-weight-bold;
+
+        @include font-size(70px, true, 1);
+    }
+
+    &__avatar-update-btn {
+        @extend %button-reset;
+        @extend %transition;
+
+        position: absolute;
+        bottom: -#{$avatar-update-btn-size/2};
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $avatar-update-btn-size;
+        height: $avatar-update-btn-size;
+        border-radius: 50%;
+        background: $white;
+
+        @include hover() {
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: $primary--light;
+        }
+    }
+}

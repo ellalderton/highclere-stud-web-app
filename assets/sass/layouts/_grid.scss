@@ -1,0 +1,22 @@
+.grid {
+
+    @include grid();
+
+    @for $i from 1 through 12 {
+
+        &--#{ $i } {
+            @include grid($i);
+        }
+    }
+
+    @each $breakpoint, $value in $grid-breakpoints {
+
+        @for $i from 1 through 12 {
+            &--#{ $breakpoint }-#{ $i } {
+                @include media-breakpoint-up(#{ $breakpoint }) {
+                    @include grid($i);
+                }
+            }
+        }
+    }
+}

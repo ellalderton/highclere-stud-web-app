@@ -1,0 +1,25 @@
+<div class="footer-nav">
+    {# Hamburger #}
+    <a class="[ footer-nav__hamburger ] [ hamburger ] [ js-nav-toggle js-nav-toggle--hamburger ]" href="#menu">
+        <span class="sr-only">Skip to the main menu</span>
+        <span class="hamburger__decor" aria-hidden="true" role="presentation">
+            <span class="hamburger__bars"></span>
+        </span>
+    </a>
+
+    <div class="footer-nav--center">
+        {# Comments #}
+        <a class="footer-nav__comments" href="">12</a>
+    </div>
+
+    {# Search button #}
+    <a class="[ footer-nav__search-button ] [ js-search-toggle ]" href="#search">
+        <span class="sr-only">Search</span>
+        <span class="footer-nav__search-icon">
+            {% include "svg/search.svg" %}
+        </span>
+        <span class="footer-nav__search-close-icon d-none">
+            {% include "svg/times.svg" %}
+        </span>
+    </a>
+</div>

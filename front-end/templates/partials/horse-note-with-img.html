@@ -1,0 +1,62 @@
+<div class="panel panel--border-left">
+    <div class="panel__header">
+        <div class="panel__headings">
+            <h3 class="panel__heading">Note message title to go here</h3>
+            <h4 class="panel__sub-heading">from Name Surname 2 hours ago</h4>
+        </div>
+        <div class="panel__header-buttons">
+            <a class="panel__header-button panel__header-button--comments" href="">
+                {% include "svg/bubble.svg" %}
+                <span class="panel__header-button-suffix">5</span>
+            </a>
+            <div class="dropdown dropleft">
+                <button type="button" class="panel__header-button panel__header-button--dropdown" id="panel-dropdown-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {% include "svg/dropdown-dots.svg" %}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="panel-dropdown-1">
+                    <a class="dropdown-item" href="#">
+                        {% include "svg/email-open.svg" %}
+                        Mark as read
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        {% include "svg/reply.svg" %}
+                        Reply
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel__body">
+        <div class="generic-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="grid--1 grid--md-2">
+                <div>
+                    <a class="media-item" href="">
+                        <div class="media-item__decor" aria-hidden="true" role="presentation">
+                            <img class="media-item__image" src="https://source.unsplash.com/aR3u_uvg0BQ/400x279" alt="">
+                        </div>
+                        <div class="media-item__main">
+                            <div class="media-item__filename">HorseFileName.png</div>
+                            <p class="media-item__meta">271.3KB</p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a class="media-item" href="">
+                        <div class="media-item__decor" aria-hidden="true" role="presentation">
+                            <img class="media-item__image" src="https://source.unsplash.com/aR3u_uvg0BQ/400x279" alt="">
+                        </div>
+                        <div class="media-item__main">
+                            <div class="media-item__filename">HorseFileName.png</div>
+                            <p class="media-item__meta">271.3KB</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.page-header {
+    $self: &;
+
+    position: relative;
+
+    &__buttons {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__button {
+        @extend %button-reset;
+
+        .icon {
+            @extend %transition;
+
+            width: 30px;
+            height: 30px;
+            fill: $primary;
+        }
+
+        @include hover() {
+            .icon {
+                fill: $primary--light;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

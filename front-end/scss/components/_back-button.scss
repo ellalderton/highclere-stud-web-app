@@ -1,0 +1,15 @@
+.back-button {
+	position: absolute;
+    left: 5px;
+    top: 4px;
+    cursor: pointer;
+
+	@include media-breakpoint-up(sm) {
+    	top: 12px;
+    }
+
+	& .icon {
+		width: 14px;
+		height: 24px;
+	}
+}

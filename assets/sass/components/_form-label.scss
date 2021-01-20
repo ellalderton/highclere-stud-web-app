@@ -1,0 +1,6 @@
+.form-label {
+    color: $secondary--light;
+    font-weight: $font-weight-bold;
+
+    @include font-size(14px, true, $line-height-sm);
+}

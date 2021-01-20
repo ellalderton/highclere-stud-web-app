@@ -1,0 +1,19 @@
+.attachment-progress {
+    display: flex;
+    height: 5px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: $grey-5;
+    border-radius: .25rem;
+
+    &__bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        background-color: $primary--light;
+        transition: width .6s ease;
+    }
+}

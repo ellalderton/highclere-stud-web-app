@@ -1,0 +1,281 @@
+.site-head {
+    $self: &;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transition: transform 0.25s ease-in-out;
+
+    &.is-top {
+        transform: translateY(0);
+    }
+
+    &.is-pinned {
+        transform: translateY(-#{$brand-height + ($brand-bar-padding * 2)});
+    }
+
+    &.is-unpinned {
+        transform: translateY(
+            -#{$brand-height + ($brand-bar-padding * 2) + $site-head-height + 2px}
+        );
+    }
+
+    &__hamburger {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
+    }
+
+    &__brand-bar {
+        padding: $brand-bar-padding 0;
+        text-align: center;
+        background: $brand-bar-background-color;
+        border-bottom: 1px solid $grey-6;
+    }
+
+    &__brand-logo {
+        height: $brand-height;
+        width: auto;
+    }
+
+    &__main {
+        position: relative;
+        height: $site-head-height;
+        background: $secondary;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: $site-max-width;
+        height: 100%;
+        padding-right: ($grid-gutter-width / 2);
+        padding-left: ($grid-gutter-width / 2);
+    }
+
+    &__search-button {
+        margin-left: 30px;
+
+        .icon {
+            @extend %transition;
+
+            width: 27px;
+            height: 27px;
+            fill: $white;
+        }
+
+        @include hover() {
+            .icon {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__comments {
+        display: flex;
+        align-items: center;
+        margin-top: -10px;
+
+        @include hover() {
+            text-decoration: none;
+        }
+    }
+
+    &__notes {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 110px;
+
+        &:hover .site-head__nav-item-badge {
+            background: lighten($notification-notes-color, 5%);
+            // color: $notification-notes-text-color;
+        }
+    }
+
+    &__comments-badge {
+        @extend %transition;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 26px;
+        background: $notification-comments-color;
+        color: $notification-comments-text-color;
+        font-weight: $font-weight-bold;
+        border-radius: 5px 5px 5px 0;
+
+        @include font-size(13px, true, 1);
+
+        #{ $self }__comments:active &,
+        #{ $self }__comments:hover &,
+        #{ $self }__comments:focus & {
+            background: lighten($notification-comments-color, 5%);
+        }
+
+        &:after {
+            @extend %transition;
+
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 0 0;
+            border-color: $notification-comments-color transparent transparent;
+
+            #{ $self }__comments:active &,
+            #{ $self }__comments:hover &,
+            #{ $self }__comments:focus & {
+                border-color: lighten($notification-comments-color, 5%)
+                    transparent transparent;
+            }
+        }
+
+        &--allread {
+            background: $grey-4;
+
+            #{ $self }__comments:active &,
+            #{ $self }__comments:hover &,
+            #{ $self }__comments:focus & {
+                background: lighten($grey-4, 5%);
+            }
+
+            &:after {
+                @extend %transition;
+
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 7px 7px 0 0;
+                border-color: $grey-4 transparent transparent;
+
+                #{ $self }__comments:active &,
+                #{ $self }__comments:hover &,
+                #{ $self }__comments:focus & {
+                    border-color: lighten($grey-4, 5%)
+                        transparent transparent;
+                }
+            }
+        }
+    }
+
+    &__comments-label {
+        margin-left: 8px;
+        color: $nav-text-color;
+        font-weight: $font-weight-bold;
+
+        @include font-size(11px, true, 1);
+    }
+
+    &__nav {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+    }
+
+    &__nav-items {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__nav-item {
+        & + & {
+            border-left: 1px solid $grey-6;
+
+            @include media-breakpoint-up(md) {
+                border-left: 0;
+            }
+        }
+    }
+
+    &__nav-link {
+        @extend %transition;
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 110px;
+
+        @include hover() {
+            text-decoration: none;
+            background: $secondary--light;
+        }
+
+        #{ $self }__nav-item.is-active & {
+            background: $secondary--dark;
+        }
+    }
+
+    &__nav-item-badge {
+        @extend %transition;
+        position: absolute;
+        top: -2px;
+        right: -18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 26px;
+        height: 22px;
+        padding: 0 4px;
+        background: $notification-notes-color;
+        color: $notification-notes-text-color;
+        border-radius: 5px;
+        font-weight: $font-weight-bold;
+        // has z-index
+
+        @include font-size(13px, true, 1);
+
+        &--allread {
+            background: $grey-4;
+        }
+    }
+
+    &__nav-item-icon {
+        position: relative;
+        margin-bottom: 5px;
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            fill: $primary--light;
+        }
+    }
+
+    &__nav-item-badge + .icon {
+        width: 25px;
+        height: 25px;
+        margin-top: 3px;
+    }
+
+    &__nav-item-label {
+        color: $nav-text-color;
+        font-weight: $font-weight-bold;
+
+        @include font-size(11px, true, 1);
+    }
+}

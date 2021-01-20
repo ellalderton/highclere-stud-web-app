@@ -1,0 +1,127 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 heading--color-secondary ]">
+            Media
+        </h1>
+        <p>last update DD-MM-YYYY</p>
+    </div>
+
+    <div class="mb-3">
+        {% include "partials/horse-item.html" %}
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" aria-selected="false">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-selected="false">Images</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-selected="false">Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-selected="false">Audio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-selected="false">Files</a>
+                </li>
+            </ul>
+            <div class="tab-content tab-content--boxed">
+                <div class="tab-pane fade show active">
+                    <ul class="[ grid--1 grid--md-2 ] [ list-unstyled ]">
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    <img class="media-item__image" src="https://source.unsplash.com/aR3u_uvg0BQ/400x279" alt="">
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    {% include "svg/file.svg" %}
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    {% include "svg/audio.svg" %}
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    {% include "svg/video-www.svg" %}
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    {% include "svg/video.svg" %}
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="media-item media-item--boxed" href="">
+                                <div class="media-item__decor" aria-hidden="true" role="presentation">
+                                    {% include "svg/audio-www.svg" %}
+                                </div>
+                                <div class="media-item__main">
+                                    <div class="media-item__filename">HorseFileName.png</div>
+                                    <p class="media-item__meta">271.3KB</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="[ col-12 col-lg-4 ] [ mt-3 mt-lg-0 ]">
+            <div class="[ sticky-sidebar ] [ flow-vertical ]">
+                <a class="btn btn-block btn-white" href="">View horse profile</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

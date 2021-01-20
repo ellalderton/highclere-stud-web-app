@@ -1,0 +1,41 @@
+.autocomplete {
+    position: relative;
+    cursor: pointer;
+    // width: 200px;
+
+    &__input {
+        // width: 150px;
+    }
+
+    &__results {
+        padding: 10px 0;
+        margin: 0;
+        // border: 1px solid $input-focus-border-color;
+        height: 200px;
+        overflow: auto;
+        width: 100%;
+        position: absolute;
+        top: 47px;
+        background: white;
+        z-index: 2;
+        // box-shadow: 1px 6px 6px 2px rgba(0, 0, 0, 0.22);
+        outline: 0;
+        box-shadow: $input-box-shadow, $input-focus-box-shadow;
+        border-radius: 5px;
+        background-color: $input-focus-bg;
+        border-color: $input-focus-border-color;
+    }
+
+    &__result {
+        align-items: center;
+        list-style: none;
+        text-align: left;
+        padding: 4px 10px;
+        cursor: pointer;
+
+        &:hover, &.is-active {
+            background-color: $primary;
+            color: white;
+        }
+    }
+}

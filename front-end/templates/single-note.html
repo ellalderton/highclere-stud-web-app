@@ -1,0 +1,109 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 heading--color-secondary ]">
+            Note message title to go here
+        </h1>
+        <p>last update DD-MM-YYYY</p>
+    </div>
+
+    <div class="mb-3">
+        {% include "partials/horse-item.html" %}
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="panel">
+                {% include "partials/horse-note-with-img.html" %}
+                <div class="pt-3 pb-3 text-center">
+                    <p class="heading--4 pb-1">5 Comments</p>
+                </div>
+
+                {% include "partials/comments.html" %}
+
+                <button type="button" class="btn btn-block btn-primary">
+                    Add Comment/Media
+                </button>
+
+                <div class="[ mt-4 ] [ flow-vertical ]">
+                    <h3 class="[ heading--3 ] [ text-center ]">Add comment</h3>
+
+                    <textarea class="form-control" name="" id="" rows="10" placeholder="Type here..."></textarea>
+
+                    <button type="button" class="btn btn-block btn-white">Add media</button>
+                    <button type="button" class="btn btn-block btn-primary">Post</button>
+
+                    <h3 class="[ heading--3 ] [ text-center ]">Choose type of media</h3>
+
+                    <div class="[ media-upload-options ] [ grid--2 grid--sm-3 grid--lg-6 ]">
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/image.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Image</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/audio.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Audio</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/audio-www.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Audio URL</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/video.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Video</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/video-www.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Video URL</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="button" class="media-upload-options__option">
+                                <span class="media-upload-options__icon">
+                                    {% include "svg/file.svg" %}
+                                </span>
+                                <span class="media-upload-options__label">Document</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="[ col-12 col-lg-4 ] [ mt-3 mt-lg-0 ]">
+            <div class="[ sticky-sidebar ] [ flow-vertical ]">
+                <a class="btn btn-block btn-white" href="">View horse profile</a>
+
+                <a href="#" class="btn btn-block btn-primary btn--has-icon">
+                    {% include "svg/note.svg" %}
+                    Add a new note
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

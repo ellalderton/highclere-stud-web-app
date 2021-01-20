@@ -1,0 +1,44 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px 0 #cecece;
+    font-weight: $font-weight-bold;
+
+    @include font-size(12px, true);
+
+    &-white {
+        color: $secondary--light;
+        background: $white;
+
+        @include hover() {
+            color: $secondary;
+            background: darken($white, 5%);
+        }
+    }
+
+    &-grey {
+        color: $white;
+        background: $grey-4;
+
+        @include hover() {
+            background: darken($grey-4, 5%);
+            color: $white;
+        }
+    }
+
+    &--has-icon {
+        padding: calc(0.8rem - 4px) 0.75rem;
+    }
+
+    .icon {
+        width: 26px;
+        height: 26px;
+        fill: $white;
+        margin-right: 10px;
+    }
+
+    .auth__form & {
+        box-shadow: none;
+    }
+}

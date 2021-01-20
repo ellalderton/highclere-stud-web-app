@@ -1,0 +1,48 @@
+.speech-bubble {
+    $self: &;
+
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        fill: $notification-comments-color;
+    }
+
+    &__text {
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        display: block;
+        width: 30px;
+        height: 31px;
+        text-align: center;
+        line-height: 32px;
+        color: $notification-comments-text-color;
+        font-weight: $font-weight-bold;
+
+        @include font-size(12px);
+    }
+
+    &--sm {
+        width: 26px;
+        height: 26px;
+
+        .icon {
+            width: 26px;
+            height: 26px;
+        }
+
+        #{ $self }__text {
+            width: 24px;
+            height: 25px;
+            line-height: 26px;
+        }
+    }
+}

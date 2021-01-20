@@ -1,0 +1,14 @@
+.add-new-note {
+    &__label {
+        @include font-size(13px);
+        color: $secondary--light;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+    }
+
+    &__input {
+        @include font-size(15px);
+        padding: $spacer / 2;
+        margin-bottom: $spacer;
+    }
+}

@@ -1,0 +1,69 @@
+.welcome-back {
+    border-bottom: 2px solid $grey-5;
+    display: flex;
+
+    h1 {
+        @include media-breakpoint-down(xs) {
+            @include font-size(24px);
+        }
+    }
+
+    h3 {
+        @include media-breakpoint-down(xs) {
+            @include font-size(20px);
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        background: $secondary;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-weight: bold;
+        @include font-size(56px);
+        font-family: $font-family-base;
+
+        @include media-breakpoint-down(xs) {
+            @include font-size(42px);
+            width: 85px;
+            height: 85px;
+        }
+
+        &-border {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: 0 2px 34px 0 rgba($black, 0.1);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            font-weight: bold;
+
+            border: 7px solid $secondary;
+            margin-right: 15px;
+
+            @include media-breakpoint-up(sm) {
+                margin-right: 45px;
+            }
+
+            @include media-breakpoint-down(xs) {
+                border: 5px solid $secondary;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}

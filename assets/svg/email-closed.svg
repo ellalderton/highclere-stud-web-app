@@ -1,0 +1,12 @@
+<svg class="icon" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7.-Horse-Notes" transform="translate(-1119.000000, -935.000000)" stroke="#C19953" stroke-width="0.75">
+            <g id="Userinterface_mail-61" transform="translate(1120.000000, 936.000000)">
+                <path d="M13.3333333,11 L0.666666667,11 C0.3,11 0,10.7 0,10.3333333 L0,0.666666667 C0,0.3 0.3,0 0.666666667,0 L13.3333333,0 C13.7,0 14,0.3 14,0.666666667 L14,10.3333333 C14,10.7 13.7,11 13.3333333,11 Z" id="Shape" stroke-linejoin="round"></path>
+                <path d="M0,0 L6.3,5.73705179 C6.7,6.0876494 7.3,6.0876494 7.66666667,5.73705179 L14,0" id="Shape"></path>
+                <path d="M0,11 L6,6" id="Shape"></path>
+                <path d="M14,11 L8,6" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

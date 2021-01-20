@@ -1,0 +1,39 @@
+.site-footer {
+    width: 100%;
+    margin-top: $spacer * 2;
+    padding: $box-padding;
+    background: #3E3E60;
+    color: $white;
+
+    @include font-size(12px, true, $line-height-sm);
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__credit {
+        margin-top: 5px;
+        color: $white;
+        font-weight: $font-weight-bold;
+
+        & a {
+            color: $white;
+        }
+
+        @include hover() {
+            color: $white;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        &__item {
+            list-style: none;
+        }
+    }
+}

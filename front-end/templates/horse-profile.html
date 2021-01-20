@@ -1,0 +1,417 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 heading--color-secondary ]">
+            2017 Out of Littlemisssunshine (IRE)
+        </h1>
+        <p>last update DD-MM-YYYY</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="items-list">
+                {# Image #}
+                <div class="items-list__item">
+                    <!-- <img class="img-fluid rounded" src="https://source.unsplash.com/aR3u_uvg0BQ/772x540" alt=""> -->
+                    <div class="list-item__image-inner" aria-hidden="true" role="presentation">
+                        <span class="list-item__image-background" style="background-image: url('https://source.unsplash.com/aR3u_uvg0BQ/772x540')"></span>
+                        <span class="list-item__image-image" style="background-image: url('https://source.unsplash.com/aR3u_uvg0BQ/772x540')"></span>
+                    </div>
+                </div>
+
+
+                {# Details #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Details</h3>
+                    </div>
+
+                    <div class="info-group__rows row">
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Age<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sire<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Colour<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Dam<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sex<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Dam's Sire<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Lorem ipsum...
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# Pedigree #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Pedigree</h3>
+                    </div>
+
+                    <div class="info-group__pedigree">
+                        <div class="row">
+                            <div class="col-6 [ mt-2 ]">
+                                <div class="kvp">
+                                    <span class="kvp__label">
+                                        Sire<span class="sr-only">:</span>
+                                    </span>
+                                    <span class="kvp__value">
+                                        Siyouni (FR)
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pedigree-tree__parent">Pivotal (GB)</div>
+                                <div class="pedigree-tree__parent">Sichilla (IRE)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-6 [ mt-2 ]">
+                                <div class="kvp">
+                                    <span class="kvp__label">
+                                        Dam<span class="sr-only">:</span>
+                                    </span>
+                                    <span class="kvp__value">
+                                        Late night (GER)
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pedigree-tree__parent">Groom Dancer (USA)</div>
+                                <div class="pedigree-tree__parent">Laurencia (GB)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-group__btn">
+                        <a class="btn btn-block btn-primary" href="">Vew full pedigree</a>
+                    </div>
+
+                    <!-- <div class="pedigree-tree">
+                        <div class="pedigree-tree__item">
+                            <div class="pedigree-tree__child">
+                                <div class="pedigree-tree__child-label">Sire</div>
+                                <div class="pedigree-tree__child-inner">
+                                    <div class="pedigree-tree__child-name">Siyouni (FR)</div>
+                                    <div class="pedigree-tree__child-line"></div>
+                                </div>
+                            </div>
+                            <div class="pedigree-tree__parents">
+                                <div class="pedigree-tree__parents-inner">
+                                    <div class="pedigree-tree__parent-1">Pivotal (GB)</div>
+                                    <div class="pedigree-tree__parent-2">Sichilla (IRE)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pedigree-tree">
+                        <div class="pedigree-tree__item">
+                            <div class="pedigree-tree__child">
+                                <div class="pedigree-tree__child-label">Dam</div>
+                                <div class="pedigree-tree__child-inner">
+                                    <div class="pedigree-tree__child-name">Late night (GER)</div>
+                                    <div class="pedigree-tree__child-line"></div>
+                                </div>
+                            </div>
+                            <div class="pedigree-tree__parents">
+                                <div class="pedigree-tree__parents-inner">
+                                    <div class="pedigree-tree__parent-1">Groom Dancer (USA)</div>
+                                    <div class="pedigree-tree__parent-2">Laurencia (GB)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <a class="btn btn-block btn-primary" href="">Vew full pedigree</a>
+                        </div>
+                    </div> -->
+                </div>
+
+                {# Sales record #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Sales record</h3>
+                    </div>
+
+                    <div class="table-responsive-md">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Year</th>
+                                    <th>Price</th>
+                                    <th>Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                    <td>Lorem ipsum...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {# Pregnancy details #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Pregnancy Details</h3>
+                    </div>
+
+                    <div class="info-group__rows row">
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Status<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    In Foal
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Covering<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Siyouni, LSD 11/06/18 (filly)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Last Service Date<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    N/A
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Due Date<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    N/A
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sex<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    N/A
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# Current foal #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Current Foal</h3>
+                    </div>
+
+                    <div class="info-group__rows row">
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Colouring<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Bay
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sex<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Filly
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sire<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Frankel, born 17/04/18
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Date of birth<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    N/A
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {# Current yearling #}
+                <div class="info-group">
+                    <div class="info-group__heading">
+                        <h3 class="[ py-1 ]">Current Yearling</h3>
+                    </div>
+
+                    <div class="info-group__rows row">
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Colouring<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Bay
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sex<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Filly
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Sire<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    Frankel, born 17/04/18
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-6 col-lg-3">
+                            <div class="kvp">
+                                <span class="kvp__label">
+                                    Date of birth<span class="sr-only">:</span>
+                                </span>
+                                <span class="kvp__value">
+                                    N/A
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="[ sticky-sidebar ] [ flow-vertical ]">             
+                <a class="btn btn-block btn-white [ note-btn ]" href="">
+                    <span class="note-btn__note--unread">
+                        {% include "svg/note.svg" %}
+                        5 Notes
+                    </span>
+                    <span class="note-btn__comment--unread">
+                        {% include "svg/bubble.svg" %}
+                        2 Comments
+                    </span>
+                </a>
+                <a class="btn btn-block btn-primary" href="">Add a new note</a>
+                <a class="btn btn-block btn-white" href="">All media</a>
+
+                {# Race data #}
+                <div class="items-list__item items-list__item--boxed">
+                    <h2 class="[ heading--3 ] [ mb-2 ]">Race Data</h2>
+                    <div class="flow-vertical--3">
+                        <div class="text--para-font">
+                            <p>View the Race Data for
+                                2017 Our of Littlemisssunshine (IRE)
+                                on Racing Post</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <a class="btn btn-block btn-primary" href="">View Race Data</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

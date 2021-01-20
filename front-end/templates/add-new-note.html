@@ -1,0 +1,34 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ underlined-heading ] [ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 ]">
+            Add New Note
+        </h1>
+    </div>
+
+    <div class="add-new-note [ row ]">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="form-group mb-3">
+                <label class="add-new-note__label" for="oldPassword">Horse</label>
+                <input class="form-control form-control-lg add-new-note__input" type="text" name="oldPassword" value="" placeholder="Search for horse...">
+                <hr>
+                <label class="add-new-note__label" for="newPassword">Title</label>
+                <input class="form-control form-control-lg add-new-note__input" type="text" name="newPassword" value="" placeholder="Type here...">
+                <label class="add-new-note__label" for="confirmNewPassword">Body</label>
+                <textarea class="form-control form-control-lg add-new-note__input" type="text" name="confirmNewPassword" value="" placeholder="Type here..." rows="8"></textarea>
+                <div class="block-btn-group pt-2">
+                    <a class="btn btn-block btn-white" href="">Add media</a>
+                    <a class="btn btn-block btn-primary" href="">Create</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+{% endblock %}

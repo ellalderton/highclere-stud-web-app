@@ -1,0 +1,50 @@
+.note-btn {
+    & .icon {
+        margin-right: 5px;
+    }
+
+    & span {
+        display: flex;
+        align-items: center;
+
+        &:first-of-type {
+            margin-right: 20px;
+        }
+    } 
+
+    &__note {
+        &--unread {
+            color: $primary;
+
+            & .icon {
+                fill: $notification-notes-color;
+            }
+
+        }
+
+        &--read {
+            color: $grey-4;
+            & .icon {
+                fill: $grey-4;
+            }
+        }
+    }
+
+    &__comment {
+        &--unread {
+            color: $primary;
+
+            & .icon {
+                fill: $notification-comments-color;
+            }
+        }
+
+        &--read {
+            color: $grey-4;
+
+            & .icon {
+                fill: $grey-4;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.icons-list {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        border-bottom: 1px solid $grey-4;
+        padding: $spacer 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        & > * {
+            border-bottom: none;
+        }
+
+        flex-direction: row;
+
+        & + & {
+            border-top: 1px solid $grey-4;
+            padding: $spacer 0;
+        }
+
+        &:first-child {
+            padding-bottom: $spacer;
+        }
+    }
+}

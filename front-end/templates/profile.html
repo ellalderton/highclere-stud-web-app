@@ -1,0 +1,66 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="[ text-center ] [ mb-4 ]">
+        <h1 class="[ heading--1 heading--color-secondary ]">
+            Your profile
+        </h1>
+        <p>last updated DD-MM-YYYY</p>
+    </div>
+
+    <div class="profile">
+
+        {# IMAGE VERSION: START #}
+        {# <div class="profile__avatar profile__avatar--has-image" style="background-image: url(https://source.unsplash.com/DYBs6Usgtg0/300x300)">
+            <button type="button" class="profile__avatar-update-btn">
+                {% include "svg/edit.svg" %}
+                <span class="sr-only">Click to update your profile image</span>
+            </button>
+        </div> #}
+        {# IMAGE VERSION: END #}
+
+        {# NON-IMAGE VERSION: START #}
+        <div class="profile__avatar">
+            <span class="profile__avatar-initials">JF</span>
+            <button type="button" class="profile__avatar-update-btn">
+                {% include "svg/plus.svg" %}
+                <span class="sr-only">Click to update your profile image</span>
+            </button>
+        </div>
+        {# NON-IMAGE VERSION: END #}
+
+        <h3 class="[ heading--3 ] [ text-center ]">James Ford</h3>
+        <div class="[ text--lg text-center text-secondary-light ] [ font-weight-bold ]">
+            <p>name@email.co.uk</p>
+        </div>
+
+        <hr>
+
+        <form action="/" method="POST">
+
+            <div class="form-group">
+                <label class="form-label" for="oldPassword">Old Password</label>
+                <input class="form-control" type="password" name="oldPassword" placeholder="Type here...">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="newPassword">New Password</label>
+                <input class="form-control" type="password" name="newPassword" placeholder="Type here...">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="confirmNewPassword">Confirm New Password</label>
+                <input class="form-control" type="password" name="confirmNewPassword" placeholder="Type here...">
+            </div>
+
+            <button type="submit" class="btn btn-block btn-primary" href="">Update</button>
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

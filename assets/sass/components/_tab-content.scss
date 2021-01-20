@@ -1,0 +1,12 @@
+.tab-content {
+    .tab-pane {
+        padding-top: $spacer;
+    }
+
+    &--boxed {
+        padding: 15px;
+        background: $white;
+        border-radius: $border-radius;
+        box-shadow: 0 2px 34px 0 rgba($black, 0.1);
+    }
+}

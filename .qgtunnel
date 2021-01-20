@@ -1,0 +1,6 @@
+
+[qgtunnel.0]
+accept = "127.0.0.1:4443"
+connect = "bloodstocksys.weatherbys.co.uk:443"
+encrypted = false
+transparent = true

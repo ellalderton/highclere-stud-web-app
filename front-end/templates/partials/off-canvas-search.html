@@ -1,0 +1,26 @@
+<div class="off-canvas-search" data-module="off-canvas-search">
+    <div class="off-canvas-search__inner">
+        <span class="[ off-canvas-search__search-close-icon ] [ js-search-toggle ]">
+            {% include "svg/times.svg" %}
+            <span class="sr-only">Close search pane</span>
+        </span>
+
+        <div class="[ text-center ] [ mt-3 mb-4 ]">
+            <h1 class="[ heading--1 heading--color-secondary ]">
+                Search
+            </h1>
+        </div>
+
+        <form action="/" method="POST">
+            <label class="form-label" for="search">Horse Search</label>
+            <input class="form-control" type="text" name="search" value="" placeholder="Type here...">
+        </form>
+
+        <hr>
+
+        {% include "partials/horse-item.html" %}
+        {% include "partials/horse-item.html" %}
+        {% include "partials/horse-item.html" %}
+        {% include "partials/horse-item.html" %}
+    </div>
+</div>

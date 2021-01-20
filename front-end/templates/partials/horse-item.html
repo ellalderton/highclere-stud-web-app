@@ -1,0 +1,71 @@
+<div class="list-item">
+    <div class="list-item__link" onclick="window.location='https://www.example.com'">
+        <div class="list-item__image">
+            <div class="list-item__image-inner" aria-hidden="true" role="presentation">
+                <span class="list-item__image-background" style="background-image: url('https://source.unsplash.com/aR3u_uvg0BQ/214x150')"></span>
+                <span class="list-item__image-image" style="background-image: url('https://source.unsplash.com/aR3u_uvg0BQ/214x150')"></span>
+            </div>
+        </div>
+        <h2 class="[ list-item__heading ] [ heading--2 ]">2017 Out of Littlemisssunshine (IRE)</h2>
+        <div class="list-item__subheading-wrapper">
+            <h3 class="[ list-item__subheading ]">Trainer Name Surname</h3>
+            <div class="list-item__icons">
+                <a class="list-item__primary-icon list-item__primary-icon--notes" href="http://www.example.com">
+                    {% include "svg/note.svg" %}
+                    <span class="list-item__primary-icon-suffix">5</span>
+                </a>
+                <a class="list-item__primary-icon list-item__primary-icon--comments" href="http://www.example.com">
+                    {% include "svg/bubble.svg" %}
+                    <span class="list-item__primary-icon-suffix">2</span>
+                </a>
+            </div>
+        </div>
+        <ul class="list-item__stats">
+            <li class="list-item__stat">
+                <div class="list-item__stat-inner">
+                    <span class="list-item__stat-label">
+                        Sire<span class="sr-only">:</span>
+                    </span>
+                    <span class="list-item__stat-value">
+                        Horse Name
+                    </span>
+                </div>
+            </li>
+            <li class="list-item__stat">
+                <div class="list-item__stat-inner">
+                    <span class="list-item__stat-label">
+                        Dam<span class="sr-only">:</span>
+                    </span>
+                    <span class="list-item__stat-value">
+                        Horse Name
+                    </span>
+                </div>
+            </li>
+            <li class="list-item__stat">
+                <div class="list-item__stat-inner">
+                    <span class="list-item__stat-label">
+                        Age<span class="sr-only">:</span>
+                    </span>
+                    <span class="list-item__stat-value">
+                        2yo
+                    </span>
+                </div>
+            </li>
+            <li class="list-item__stat">
+                <div class="list-item__stat-inner">
+                    <span class="list-item__stat-label">
+                        Pregnancy status<span class="sr-only">:</span>
+                    </span>
+                    <span class="list-item__stat-value">
+                        In Foal
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <div class="list-item__progress__container">
+            <div class="list-item__progress">
+                <div class="list-item__progress__bar" ref="listProgressBar"></div>
+            </div>
+        </div>
+    </div>
+</div>

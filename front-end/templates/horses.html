@@ -1,0 +1,47 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="[ container-fluid ] [ pt-4 ]">
+
+    <div class="page-header">
+        <h1 class="[ heading--1 heading--color-secondary ] [ text-center ] [ mb-4 ]">
+            Horses
+        </h1>
+        <div class="page-header__buttons">
+            <button type="button" class="page-header__button">
+                <span class="sr-only">Open filter options</span>
+                {% include "svg/filter.svg" %}
+            </button>
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#" aria-selected="false">In training</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#" aria-selected="true">Breeding</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active">
+
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+            {% include "partials/horse-item.html" %}
+
+        </div>
+    </div>
+
+    <div>
+        {% include "partials/pagination.html" %}
+    </div>
+
+</div>
+
+{% endblock %}

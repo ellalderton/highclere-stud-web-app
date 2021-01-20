@@ -1,0 +1,8 @@
+.sticky-sidebar {
+    position: sticky;
+    top: $site-head-height + 30px;
+
+    @include media-breakpoint-down(md) {
+    	margin-top: $spacer;
+    }
+}

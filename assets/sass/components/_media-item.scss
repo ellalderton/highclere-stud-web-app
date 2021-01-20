@@ -1,0 +1,72 @@
+.media-item {
+    $self: &;
+
+    @extend %transition;
+
+    display: flex;
+    align-items: flex-start;
+
+    &--boxed {
+        padding: 15px;
+        background: $white;
+        border-radius: $border-radius;
+        box-shadow: 0 2px 20px 0 rgba($black, 0.15);
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: 0 2px 20px 0 rgba($black, 0.35);
+        }
+    }
+
+    @include hover() {
+        text-decoration: none;
+    }
+
+    &__decor {
+        flex-shrink: 0;
+        width: 84px;
+        height: 60px;
+        margin-right: 15px;
+
+        .icon {
+            @extend %transition;
+
+            width: 60px;
+            height: 60px;
+            fill: $primary--light;
+
+            #{ $self }:active &,
+            #{ $self }:hover &,
+            #{ $self }:focus & {
+                fill: $primary;
+            }
+        }
+    }
+
+    &__image {
+        border-radius: $border-radius;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__filename {
+        margin-bottom: 3px;
+        color: $secondary--light;
+        font-weight: $font-weight-bold;
+
+        @include font-size(15px, true, $line-height-sm);
+        @include word-wrap();
+    }
+
+    &__meta {
+        color: $grey-2;
+
+        @include font-size(13px, true, $line-height-sm);
+    }
+
+    &__item {
+        list-style: none;
+    }
+}

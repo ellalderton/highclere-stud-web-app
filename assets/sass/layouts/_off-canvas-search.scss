@@ -1,0 +1,81 @@
+.off-canvas-search {
+    $self: &;
+
+    @extend %transition;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: $spacer;
+    overflow-x: scroll;
+    background: $grey-6;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    // has z-index
+
+    &__inner {
+        width: 100%;
+        max-width: $site-max-width;
+        margin: 0 auto;
+        padding-bottom: $spacer;
+
+        @include media-breakpoint-up(md) {
+            position: relative;
+            padding-bottom: $spacer * 2;
+        }
+    }
+
+    &__search-close-icon {
+        display: none;
+
+        .icon {
+            @extend %transition;
+        }
+
+        display: block;
+        right: $spacer;
+        position: absolute;
+        top: $spacer * 2;
+        z-index: 15;
+
+        @include media-breakpoint-up(md) {
+            right: 0;
+            top: 10px;
+        }
+
+        .icon {
+            width: 26px;
+            width: 26px;
+            fill: $primary;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .icon {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    &__label {
+        color: $black;
+        font-weight: bold;
+        @include font-size(14px);
+        font-family: $font-family-paragraph;
+    }
+
+    &.is-active {
+        @include media-breakpoint-up(md) {
+            left: 100%;
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 20px;
+    }
+}

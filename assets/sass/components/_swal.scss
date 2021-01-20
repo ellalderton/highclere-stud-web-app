@@ -1,0 +1,25 @@
+.swal2-popup .swal2-styled.swal2-confirm {
+	background-color: $primary !important;
+	color: $white !important;
+	margin: auto;
+	display: block !important;
+
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+.swal2-icon.swal2-error,
+{
+	border-color: $secondary--light !important;
+}
+
+.swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+	background-color: $secondary--light !important;
+}
+
+.swal2-popup .swal2-content {
+	color: $grey-2 !important;
+	font-size: 16px !important;
+	line-height: 23px !important;
+}

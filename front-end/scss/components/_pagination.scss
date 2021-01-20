@@ -1,0 +1,90 @@
+.pagination {
+    justify-content: center;
+    padding: $spacer 0;
+
+    &__link {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid $primary;
+        margin-right: $spacer / 1.5;
+        color: $secondary--light;
+        font-weight: bold;
+        background-color: $white;
+        @include font-size(14px);
+
+        @include media-breakpoint-down(xs) {
+            width: 28px;
+            height: 28px;
+            @include font-size(12px);
+            margin-right: 8px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $primary;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+        }
+
+        &--last {
+            margin-right: 0;
+        }
+    }
+
+    &__dots {
+        padding: 0;
+        color: $primary;
+        position: relative;
+        top: -10px;
+        @include font-size(25px);
+        margin-right: $spacer / 1.5;
+
+        @include media-breakpoint-down(xs) {
+            margin-right: 8px;
+        }
+    }
+
+    &__prev,
+    &__next {
+        background-color: transparent;
+        border: none;
+        color: $secondary--light;
+        font-weight: bold;
+        outline: none;
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $secondary--light;
+        }
+
+        @include media-breakpoint-down(xs) {
+            @include font-size(14px);
+        }
+    }
+
+    &__next {
+        @include media-breakpoint-down(xs) {
+            padding-left: 8px;
+        }
+    }
+
+    .active {
+        & > * {
+            background-color: $primary;
+            color: $white;
+            border: inherit;
+        }
+    }
+}

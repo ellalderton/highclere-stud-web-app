@@ -1,0 +1,14 @@
+.kvp-group {
+    list-style: none;
+    padding-left: 0;
+
+    @include grid(2, 10px);
+
+    @include media-breakpoint-up(sm) {
+        @include grid(3, 10px);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include grid(4, 10px);
+    }
+}
