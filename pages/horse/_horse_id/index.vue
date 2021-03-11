@@ -243,7 +243,8 @@
                     totalPages: 1,
                     currentPage: 1,
                     scrollToInterval: null
-                }
+                },
+                progeny: null
             }
         },
         components: {
@@ -265,7 +266,9 @@
 
                 this.isMobileWidth();
 
+                this.getBreeding();
                 this.getResults();
+                
             }
 
             window.addEventListener('resize', this.isMobileWidth);
@@ -347,6 +350,16 @@
                     this.results = null;
                 }
                 this.resultsPagination.totalPages = Math.floor(response.resultsFound / response.resultsMax);
+            },
+            async getBreeding() {
+
+                const response = await this.$store.dispatch('breeding/getBreeding', this.horse.wapi_id)
+                .catch(error => {
+                    this.handleApiError(error);
+                });
+
+                console.log('BREEDING', response.data[0].progeny);
+                this.progeny = response.data[0].progeny;
             }
         }
     }

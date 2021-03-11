@@ -138,16 +138,50 @@ async function start() {
       reqBodyEncoding: null,
 
       proxyReqOptDecorator(opts, srcReq) {
+        // console.log('OPTS', opts.path);
+        // console.log('srcReq', srcReq);
         // console.log('opts', opts);
         // console.log('srcReq', srcReq);
-
-        opts.headers['Authorization'] = EANDRAPITOKEN;
-        opts.headers['Accept'] = 'application/json';
-
+        if(opts.path === '/4DCGI/EANDRAPI/RacesForHorse') {
+          opts.headers['Authorization'] = EANDRAPITOKEN;
+          opts.headers['Accept'] = 'application/json';
+          console.log('OPTS RESULTS:', srcReq);
+        } else {
+          // console.log('OPTS', opts.path);
+          opts.headers['Authorization'] = '3A79256464D0EE49896EDF50114C9FCA';
+          // opts.headers['Content-Type'] = 'application/json';
+          console.log('OPTS BREEDING:', srcReq);
+        }
+        
         return opts;
       }
     })
   );
+
+  // app.use(
+  //   '/w-maresapi',
+  //   timeout('5s'),
+  //   haltOnTimedout,
+  //   proxy('https://live.bloodstockreports.co.uk', {
+  //     reqBodyEncoding: null,
+
+  //     proxyReqOptDecorator(opts, srcReq) {
+  //       // console.log('opts', opts);
+  //       // console.log('srcReq', srcReq);
+
+  //       opts.headers['Authorization'] = '3A79256464D0EE49896EDF50114C9FCA';
+  //       // opts.headers['Accept'] = 'application/json';
+  //       opts.headers['Content-Type'] = 'application/json';
+
+  //       return opts;
+  //     }
+  //   })
+  // );
+  
+  // app.use((req,res,next)=>{
+  //   // console.log('req recieved from client', req);
+  //   next();//this will invoke next middleware function
+  // });
 
   // Give nuxt middleware to express
   app.use(nuxt.render)
