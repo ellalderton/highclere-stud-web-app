@@ -63,7 +63,8 @@
 			color: $grey-1;
 			@include font-size(18px, true, 1.05);
 			font-weight: bold;
-			background-image: linear-gradient(-179deg, #F0F0F0 0%, #E2E2E2 100%);
+			// background-image: linear-gradient(-179deg, #F0F0F0 0%, #E2E2E2 100%);
+			background: $grey-5;
 			padding: 15px 15px 8px 15px;
 			border-right: 2px solid $white;
 		}

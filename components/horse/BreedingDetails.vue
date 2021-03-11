@@ -28,19 +28,20 @@
                     </tr>
                 </tbody>
         	</table>
-		<!-- 	
-			<result-accordion-profile 
+			
+			<breeding-detail-accordion
 				v-if="!isDesktop"
-				v-for="result, index in results" 
-				:result="result"
+				v-for="progeny, index in progenies" 
+				:progeny="progeny"
 				:key="index"
-			/>	 -->		
+                :parent="parent"
+			/>			
         </div>
 	</div>
 </template>
 
 <script>
-	// import ResultAccordionProfile from '@/components/results/ResultAccordionProfile';
+	import BreedingDetailAccordion from '@/components/horse/BreedingDetailAccordion';
 
 	export default {
 		data() {
@@ -60,7 +61,7 @@
 			}
 		},
 		components: {
-			// ResultAccordionProfile
+			BreedingDetailAccordion
 		},
 		mounted() {
 			if (process.browser) {
