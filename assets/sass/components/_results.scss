@@ -27,7 +27,8 @@
 			@include font-size(14px, true);
 			padding: 15px 15px 8px 15px;
 			vertical-align: bottom;
-			background-image: linear-gradient(-180deg, #D4D4D4 0%, #D4D4D4 100%);
+			// background-image: linear-gradient(-180deg, #D4D4D4 0%, #D4D4D4 100%);
+			background: $grey-6;
 			border-top: 2px solid $white;
 			border-right: 2px solid $white;
 
@@ -42,14 +43,13 @@
 				@include font-size(40px, true);
 				font-weight: 500;
 				color: $white;				
-				background: $grey-2;
+				background: $grey-4;
 				text-align: center;
 
 				&--first {
-					background: #717171;
 					font-weight: 700;
-					color: $primary--light;
-					background: $secondary--dark;
+					color: $white;
+					background: $primary;
 				}
 				
 				& sup {

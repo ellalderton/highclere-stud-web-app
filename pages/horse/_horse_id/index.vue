@@ -115,6 +115,10 @@
                         </div>
                     </div>
 
+                    <template v-if="progeny && progeny.length">
+                        <breeding-details :progenies="progeny" :parent="horse.name"></breeding-details>
+                    </template>
+
                     <template v-if="results">
                         <results-profile
                             id="results-container" 
@@ -218,6 +222,7 @@
     import HorseAvatar from '@/components/horse/HorseAvatar';
     import HorseProfileEntries from '@/components/entry/HorseProfileEntries';
     import ResultsProfile from '@/components/results/ResultsProfile';
+    import BreedingDetails from '@/components/horse/BreedingDetails';
     import VueScrollTo from 'vue-scrollto';
 
     export default {
@@ -256,7 +261,8 @@
             NoteIconSvg,
             HorseAvatar,
             HorseProfileEntries,
-            ResultsProfile
+            ResultsProfile,
+            BreedingDetails
         },
         mounted() {
             if (process.browser) {

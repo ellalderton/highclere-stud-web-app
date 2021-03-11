@@ -8,7 +8,7 @@ export const actions = {
 		let data = {
 			"request":"ObtainMareDetails",
 		    "parameters":{
-		        "animalId": wapiId,
+		        "animalId": 818940254,
 		        "idType":"WAPI"
 		    }
 		};
