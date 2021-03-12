@@ -28,7 +28,8 @@ export const state = () => ({
 		group: null,
 		open: false,
 		usersHorses: null,
-		sort: null
+		sort: null,
+		type: 'training'
 	},
 	pagination: {
 		horses: 1
@@ -70,7 +71,7 @@ export const mutations = {
 	setFilters(state, filters) {
 		state.filters = filters;
 	},
-	clearFilters(state) {
+	clearFilters(state, type = 'training') {
 		state.filters = {
 			age: null,
 			primary_color: null,
@@ -82,7 +83,8 @@ export const mutations = {
 			group: null,
 			open: false,
 			usersHorses: null,
-			sort: null
+			sort: null,
+			type: type
 		}
 	},
 	filterByTrainer(state, trainerId) {
@@ -97,7 +99,8 @@ export const mutations = {
 			group: null,
 			open: true,
 			usersHorses: null,
-			sort: null
+			sort: null,
+			type: 'training'
 		}
 	},
 	setHorsesPagination(state, page) {

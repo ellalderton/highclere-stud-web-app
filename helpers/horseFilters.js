@@ -13,6 +13,7 @@ class horseFilters {
 	filterHorses() {
 		let filteredHorses = this.horses;
 
+		filteredHorses = this.filterByType(filteredHorses);
 		filteredHorses = this.filterByKey(filteredHorses, 'age');
 		filteredHorses = this.filterByKey(filteredHorses, 'current_location');
 		filteredHorses = this.filterByColour(filteredHorses);
@@ -94,6 +95,20 @@ class horseFilters {
 		if(!_isNull(this.filters.sex) && this.filters.sex.toLowerCase() !== '') {
 			horses = _filter(horses, (horse) => {
 				return horse.sex.toLowerCase() === this.filters.sex.toLowerCase();
+			});
+		}
+		
+		return horses;
+	}
+
+	filterByType(horses) {
+		if(this.filters.type === 'training') {
+			horses = _filter(horses, (horse) => {
+				return horse.horse_type_id === 3;
+			});
+		} else {
+			horses = _filter(horses, (horse) => {
+				return horse.horse_type_id !== 3;
 			});
 		}
 		

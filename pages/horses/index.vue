@@ -120,6 +120,15 @@
             </div>
         </template>
 
+        <ul class="nav nav-tabs" id="horseTypeTab" role="tablist">
+            <li class="nav-item">
+                <a @click.prevent="setType('training')" href="#" class="nav-link" :class="{'active': filters.type === 'training'}" id="in-training-tab"">In Training</a>
+            </li>
+            <li class="nav-item">
+                <a @click.prevent="setType('breeding')" href="#" class="nav-link" :class="{'active': filters.type === 'breeding'}">Breeding</a>
+            </li>
+        </ul>
+
         <div class="tab-content" id="tabContent">
             <div class="tab-pane fade show active" role="tabpanel" :class="{'list-item__grid-view': gridView === 'grid'}">
                 <div class="list-item" :class="{'list-item--note-tab': canSeeNotes}" v-for="horse in paginatedHorses">

@@ -49,7 +49,7 @@ const Cookies = require('universal-cookie')
 const proxy = require('express-http-proxy')
 const bodyParser = require('body-parser')
 
-const companyId = 32; // Highclere Stud
+const companyId = 31; // Highclere Stud
 const LIVEAPI = 'https://bloodstockapp.weatherbys.co.uk';
 const STAGINGAPI = 'https://bloodstocksys.weatherbys.co.uk';
 // const LOCALAPI = 'https://bloodstocksys.weatherbys.co.uk';
@@ -145,12 +145,12 @@ async function start() {
         if(opts.path === '/4DCGI/EANDRAPI/RacesForHorse') {
           opts.headers['Authorization'] = EANDRAPITOKEN;
           opts.headers['Accept'] = 'application/json';
-          console.log('OPTS RESULTS:', srcReq);
+          // console.log('OPTS RESULTS:', srcReq);
         } else {
           // console.log('OPTS', opts.path);
           opts.headers['Authorization'] = '3A79256464D0EE49896EDF50114C9FCA';
           // opts.headers['Content-Type'] = 'application/json';
-          console.log('OPTS BREEDING:', srcReq);
+          // console.log('OPTS BREEDING:', srcReq);
         }
         
         return opts;

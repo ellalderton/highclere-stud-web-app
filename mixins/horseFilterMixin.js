@@ -27,7 +27,8 @@ const horseFilterMixin = {
 				pregnancy_status: null,
 				group: null,
 				usersHorses: null,
-				sort: null
+				sort: null,
+				type: 'training'
 			}
 		}
 	},
@@ -47,6 +48,11 @@ const horseFilterMixin = {
         	this.$nextTick(() => {
 				VueScrollTo.scrollTo(`#tabContent`, 10, {offset: -130,});
 			});
+        });
+
+        this.$nuxt.$on('reload_horses_page', () => {
+        	console.log('reload_horses_page');
+        	this.clearFilters('training');
         });
 	},
 	beforeDestroy() {
@@ -93,6 +99,10 @@ const horseFilterMixin = {
 		}
 	},
 	methods: {
+		setType(type) {
+			this.filters.type = type;
+			this.submitFilters();
+		},
 		submitFilters(page = null) {
 			// create new object otherwise any changes to this.filters will be
 			// updated on our store by reference.
@@ -106,7 +116,7 @@ const horseFilterMixin = {
 				this.$store.commit('horses/resetPagination');
 			}		
 		},
-		clearFilters() {
+		clearFilters(type = null) {
 			this.filters = {
 				age: null,
 				primary_color: null,
@@ -116,11 +126,12 @@ const horseFilterMixin = {
 				current_location: null,
 				pregnancy_status: null,
 				group: null,
-				open: this.filters.open,
+				open: type ? false : this.filters.open,
 				usersHorses: null,
-				sort: null
+				sort: null,
+				type: type ? type : this.filters.type
 			};
-			this.$store.commit('horses/clearFilters');
+			this.$store.commit('horses/clearFilters', this.filters.type);
 			this.pagination.currentPage = 1;
 			this.$store.commit('horses/resetPagination');
 		},
