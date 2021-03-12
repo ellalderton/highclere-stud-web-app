@@ -7,6 +7,7 @@
         <h2 class="[ list-item__heading ] [ heading--2 ] [ font-weight-normal ] [ pt-3 ]" @click="goToHorse">{{ horse.name | uppercase }}
             <span>{{ horse.ownership ? horse.ownership.name : '' }}</span>
         </h2>
+        <img v-if="user.avatar_url" class="list-item__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">
         <div class="list-item__subheading-wrapper">
             <div class="list-item__icons" v-if="showNoteIcons && canSeeNotes">
                 <nuxt-link
@@ -153,6 +154,9 @@ import HorseAvatar from '@/components/horse/HorseAvatar';
                 if(typeof this.horse.sex === 'object') return this.horse.sex.name;
 
                 return this.horse.sex;
+            },
+            user() {
+                return this.$store.getters['auth/getUser'];
             }
         },
         methods: {

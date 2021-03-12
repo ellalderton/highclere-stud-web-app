@@ -57,6 +57,43 @@
         }
     }
 
+    &__silk {
+        height: auto;
+        position: absolute;
+        max-width: 30px;
+        max-height: 30px;
+        right: 20px;
+        
+
+        @include media-breakpoint-down(xs) {
+            top: 58px;
+        }
+
+        @include media-breakpoint-only(sm) {
+            top: 20px;
+        }
+
+        @include media-breakpoint-only(md) {
+            top: 22px;
+        }
+
+        @include media-breakpoint-only(lg) {
+            max-width: 44px;
+            max-height: 44px;
+            top: 28px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 44px;
+            max-height: 44px;
+            bottom: 56px;
+        }
+
+        // @include media-breakpoint-up(xl) {
+        //     bottom: 70px;
+        // }
+    }
+
     &__link {
         display: flex;
         flex-wrap: wrap;
@@ -166,7 +203,7 @@
 
     &__heading {
         margin-bottom: 6px;
-        padding: 0 $box-padding;
+        padding: 0 62px 0 $box-padding;
         order: 1;
         font-family: $font-family-paragraph;
         font-weight: 700;
@@ -175,6 +212,10 @@
             padding-top: 5px;
             display: block;
             @include font-size(14px, true, 1.2);
+
+            @include media-breakpoint-only(sm) {
+                @include font-size(12px, true, 1.2);
+            }
         }
 
         @include media-breakpoint-only(sm) {
@@ -190,6 +231,7 @@
         }
 
         @include media-breakpoint-up(lg) {
+            padding: 0 78px 0 $box-padding;
             .list-item__grid-view & {
                 @include font-size(20px, true, 1.2);
             }
@@ -422,19 +464,23 @@
 
     &__stat-inner {
         height: 100%;
-        padding: 12px 12px;
+        padding: 6px 12px;
         background: $grey-6;
         border-radius: $border-radius;
     }
 
     &__stat-label {
         display: block;
-        margin-bottom: 3px;
+        margin-bottom: 2px;
         color: $grey-1;
         font-weight: $font-weight-bold;
         font-family: $font-family-base;
 
-        @include font-size(16px, true, $line-height-sm);
+        @include font-size(12px, true, $line-height-sm);
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(14px, true, $line-height-sm);
+        }
     }
 
     &__stat-value {
@@ -443,10 +489,10 @@
         font-family: $font-family-base;
         font-weight: 300;
 
-        @include font-size(14px, true, $line-height-sm);
+        @include font-size(11px, true, $line-height-sm);
 
         @include media-breakpoint-up(md) {
-            @include font-size(14px, true, $line-height-sm);
+            @include font-size(12px, true, $line-height-sm);
         }
     }
 
