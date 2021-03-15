@@ -8,10 +8,18 @@
 		<td>{{ result.raceCountry }}</td>
 		<td>{{ result.raceCourse }}</td>
 		<td>{{ result.raceDate | formattedDate }}</td>
-		<td class="results__td--with-img">
-			{{ result.raceName | uppercase }}, {{ result.raceDetails | uppercase }}
-			<img v-if="user.avatar_url" class="results__td__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">
-		</td>	
+		<template v-if="user.avatar_url && user.role === 'staff'">
+			<td class="results__td--with-img">
+				{{ result.raceName | uppercase }}, {{ result.raceDetails | uppercase }}
+				<img class="results__td__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">
+			</td>	
+		</template>
+		<template v-else>
+			<td>
+				{{ result.raceName | uppercase }}, {{ result.raceDetails | uppercase }}
+			</td>
+		</template>
+		
 		<td>{{ result.raceTime }}</td>
 		<td class="notes-col" v-if="canSeeNotes">
 			<div class="results__row__notes" v-if="horse" >

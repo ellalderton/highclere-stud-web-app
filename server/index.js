@@ -49,15 +49,15 @@ const Cookies = require('universal-cookie')
 const proxy = require('express-http-proxy')
 const bodyParser = require('body-parser')
 
-const companyId = 31; // Highclere Stud
+const companyId = 32; // Highclere Stud
 const LIVEAPI = 'https://bloodstockapp.weatherbys.co.uk';
 const STAGINGAPI = 'https://bloodstocksys.weatherbys.co.uk';
 // const LOCALAPI = 'https://bloodstocksys.weatherbys.co.uk';
 const LOCALAPI = 'http://cms-api.local';
 const APIURL = process.env.NODE_ENV === 'production' ? process.env.VERSION === 'LIVE' ? `${LIVEAPI}` : `${STAGINGAPI}` : `${LOCALAPI}`;
 
-const STAGINGEANDRAPITOKEN = '197E858994B549469C06F49FB9AB2DEF';
-const LIVEEANDRAPITOKEN = 'B7EC49758A053541B1E7BB625429234C';
+const STAGINGEANDRAPITOKEN = 'C1224D8704A7EE4095B0B96F069D94F3';
+const LIVEEANDRAPITOKEN = '53206702F8BDB44AAF95B127FC505B8A';
 const EANDRAPITOKEN = process.env.VERSION === 'LIVE' ? LIVEEANDRAPITOKEN : STAGINGEANDRAPITOKEN;
 
 app.set('port', port)

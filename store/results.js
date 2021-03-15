@@ -40,7 +40,7 @@ export const actions = {
 			const postUrl = `${process.client ? window.location.origin : ''}/w-erapi/4DCGI/EANDRAPI/RacesForList`;
 
 			const resultsMax = 30;
-			const dateFrom = moment().subtract(9,'d').format('YYYY-MM-DD');
+			const dateFrom = moment().subtract(309,'d').format('YYYY-MM-DD');
 
 			// SESSION, USER, ID
 			Cookie.remove('SESSION');

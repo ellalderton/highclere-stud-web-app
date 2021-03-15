@@ -8,7 +8,7 @@
 				>
 					{{ result.position }}<sup>{{ result.position | numberToPosition }}</sup>
 				</div>		
-				<img v-if="user.avatar_url" class="results-accordion__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">	
+				<img v-if="user.avatar_url && user.role === 'staff'" class="results-accordion__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">	
 			</div>
 			<div class="results-accordion__row__copy">
 				<template v-if="!profileHorse">

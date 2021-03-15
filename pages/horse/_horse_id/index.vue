@@ -364,7 +364,6 @@
                     this.handleApiError(error);
                 });
 
-                console.log('BREEDING', response.data[0].progeny);
                 this.progeny = response.data[0].progeny;
             }
         }

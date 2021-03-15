@@ -39,7 +39,7 @@
 			&__time {
 				&--profile {
 					@include font-size(18px, true, 1.05);
-					color: $secondary--dark;
+					color: $primary;
 				}
 			}
 		}
