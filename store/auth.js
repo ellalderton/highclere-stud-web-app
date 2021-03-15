@@ -53,7 +53,7 @@ export const mutations = {
 		state.user = null;
 		state.showWelcome = null;
 		state.userTimestamp = null;
-		state.canAddNotes = false;
+		state.canAddNotes = true;
 	},
 	minusUnreadNotes(state) {
 		state.user.unread_notes = state.user.unread_notes - 1;
