@@ -56,8 +56,8 @@
 					                        <th>Trainer</th>
 					                        <th>Race<br>Country</th>
 					                        <th>Race<br>Course</th>
-					                        <th>Race<br>Details</th>
 					                        <th>Race<br>Date</th>
+					                        <th>Race<br>Details</th>
 					                        <th>Race<br>Time</th>
 					                        <th v-if="canSeeNotes" class="notes-col"></th>
 					                    </tr>

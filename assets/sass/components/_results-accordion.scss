@@ -10,11 +10,22 @@
 		display: flex;
 		justify-content: space-between;		
 		align-items: center;
+		position: relative;
+
+		&--index {
+			padding-bottom: 46px;
+		}
 
 		&__position {
 			display: flex;
 			margin-left: -15px;
 			width: 55px;
+
+			&--index {
+				position: absolute;
+				bottom: 8px;
+				left: 28px;
+			}
 
 			&__container {
 				width: 35px;
@@ -134,5 +145,12 @@
 			}
 		}
 
+	}
+
+	&__silk {
+		position: absolute;
+		width: 31px;
+		height: 31px;
+		left: 48px;
 	}
 }

@@ -15,7 +15,7 @@ export const actions = {
 		let data = {
 			"request":"ObtainMareDetails",
 		    "parameters":{
-		        "animalId": 818940254,
+		        "animalId": wapiId,
 		        "idType":"WAPI"
 		    }
 		};

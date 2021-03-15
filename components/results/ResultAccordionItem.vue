@@ -1,13 +1,14 @@
 <template>
 	<div class="results-accordion__container" v-if="horse">
-		<div class="results-accordion__row">
-			<div class="results-accordion__row__position">
+		<div class="results-accordion__row results-accordion__row--index">
+			<div class="results-accordion__row__position results-accordion__row__position--index">
 				<div 
 					class="results-accordion__row__position__container"
 					:class="{'results-accordion__row__position__container--first': result.position == 1}"
 				>
 					{{ result.position }}<sup>{{ result.position | numberToPosition }}</sup>
-				</div>			
+				</div>		
+				<img v-if="user.avatar_url" class="results-accordion__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">	
 			</div>
 			<div class="results-accordion__row__copy">
 				<template v-if="!profileHorse">
@@ -135,7 +136,10 @@
 				}
 
 				return this.$store.getters['horses/getHorsebyWapi'](this.result.animalID);
-			}
+			},
+			user() {
+                return this.$store.getters['auth/getUser'];
+            }	
 		},
 		methods: {
 			toggleDropDown() {

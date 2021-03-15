@@ -7,8 +7,11 @@
 		<td><span v-if="horse">{{ horseTrainer }}</span></td>
 		<td>{{ result.raceCountry }}</td>
 		<td>{{ result.raceCourse }}</td>
-		<td>{{ result.raceName | uppercase }}, {{ result.raceDetails | uppercase }}</td>
 		<td>{{ result.raceDate | formattedDate }}</td>
+		<td class="results__td--with-img">
+			{{ result.raceName | uppercase }}, {{ result.raceDetails | uppercase }}
+			<img v-if="user.avatar_url" class="results__td__silk" :src="`${user.avatar_url}?w=100&h=100`" alt="silk">
+		</td>	
 		<td>{{ result.raceTime }}</td>
 		<td class="notes-col" v-if="canSeeNotes">
 			<div class="results__row__notes" v-if="horse" >
@@ -62,7 +65,10 @@
 		computed: {
 			horse() {
 				return this.$store.getters['horses/getHorsebyWapi'](this.result.animalID);
-			}		
+			},
+            user() {
+                return this.$store.getters['auth/getUser'];
+            }		
 		}
 	}
 </script>

@@ -36,6 +36,29 @@
 				color: $secondary--dark;
 			}
 
+			&.results__td--with-img {
+				padding-right: 60px;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 2px;
+					height: 100%;
+					right: 59px;
+					top: 0;
+					background-color: $white;
+				}
+
+				& .results__td__silk {
+					width: 42px;
+					height: 42px;
+					position: absolute;
+					right: 8px;
+					top: calc(50% - 21px);
+				}
+			}
+
 			&.results__result {
 				max-width: 100px;
 				// display: flex;
