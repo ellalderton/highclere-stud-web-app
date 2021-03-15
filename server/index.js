@@ -142,10 +142,10 @@ async function start() {
         // console.log('srcReq', srcReq);
         // console.log('opts', opts);
         // console.log('srcReq', srcReq);
-        if(opts.path === '/4DCGI/EANDRAPI/RacesForHorse') {
+        if(opts.path === '/4DCGI/EANDRAPI/RacesForHorse' || opts.path === '/4DCGI/EANDRAPI/RacesForList') {
           opts.headers['Authorization'] = EANDRAPITOKEN;
           opts.headers['Accept'] = 'application/json';
-          // console.log('OPTS RESULTS:', srcReq);
+          // console.log('OPTS RESULTS:', opts);
         } else {
           // console.log('OPTS', opts.path);
           opts.headers['Authorization'] = '3A79256464D0EE49896EDF50114C9FCA';

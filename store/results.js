@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { sortBy as _sortBy, filter as _filter, contains as _contains } from 'underscore';
 import moment from 'moment';
+import Cookie from 'js-cookie';
 
 export const state = () => ({
 	results: [],
@@ -41,6 +42,14 @@ export const actions = {
 			const resultsMax = 30;
 			const dateFrom = moment().subtract(9,'d').format('YYYY-MM-DD');
 
+			// SESSION, USER, ID
+			Cookie.remove('SESSION');
+			Cookie.remove('USER');
+			Cookie.remove('ID');
+
+
+			// Cookie.set('app_jwt', result.data.token, { expires: 700 });	
+
 			return this.$axios
 			.$post(postUrl, {
 				dateFrom: dateFrom,
@@ -50,6 +59,7 @@ export const actions = {
 				headers: {}
 			})
 			.then(response => {
+				console.log('RES!!!', response);
 				let results = response.performances;
 				
 				if(response.resultsFound > resultsMax) {

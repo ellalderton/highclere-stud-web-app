@@ -1,9 +1,16 @@
 import axios from 'axios';
+import Cookie from 'js-cookie';
 
 export const actions = {
 	
 	getBreeding(vuexContext, wapiId) {
 		const postUrl = `${process.client ? window.location.origin : ''}/w-erapi/4DCGI/MareAPI`;
+
+		// SESSION, USER, ID
+			Cookie.remove('SESSION');
+			Cookie.remove('USER');
+			Cookie.remove('ID');
+
 
 		let data = {
 			"request":"ObtainMareDetails",
